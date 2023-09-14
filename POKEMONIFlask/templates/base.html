@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+<div id="first">
+    <h1>Pokedex</h1>
+    <form action="/add" method="post">
+        <div>
+            <label class="thick">Name</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label class="thick">Type</label>
+            <input type="text" name="type">
+        </div>
+        <div>
+            <label class="thick">Evolution</label>
+            <input type="text" name="evolution">
+        </div>
+        <button class="button1" type="submit">Add Pokemon</button>
+    </form>
+    <br><br>
+    <table>
+        <thead>
+        <tr>
+            <th class="thick">ID</th>
+            <th class="thick">Name</th>
+            <th class="thick">Type</th>
+            <th class="thick">Evolution</th>
+            <th class="thick">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for pokemon in pokemon_list %}
+        <tr>
+            <td>{{ pokemon.id }}</td>
+            <td>{{ pokemon.name }}</td>
+            <td>{{ pokemon.type }}</td>
+            <td>{{ pokemon.evolution }}</td>
+            <td>
+                <a href="/update/{{ pokemon.id }}" class="button2">Update</a>
+                <a href="/delete/{{ pokemon.id }}" class="button3">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flash-messages">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<button class="button1" type="button" onclick="window.location.href='/count_types'">Count Types</button>
+
+<form action="/search" method="POST">
+    <div>
+        <label class="thick">Search by Type:</label>
+        <input type="text" name="searchType">
+        <button class="button1" type="submit" name="search">Search</button>
+    </div>
+</form>
+
+
+
+</div>
+</body>
+</html>

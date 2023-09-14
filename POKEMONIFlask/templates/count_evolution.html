@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Evolution Counts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h1>Pokemon Type Counts</h1>
+    <ul>
+        {% for Evolution, count in type_counts.items() %}
+            <li>There are {{ count }} Pokemons of evolution "{{ evolution }}"</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

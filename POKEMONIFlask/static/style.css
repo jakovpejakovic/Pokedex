@@ -1,0 +1,90 @@
+
+a:link {
+    text-decoration: none;
+}
+
+
+div {
+    text-align: center;
+}
+
+
+input {
+    display: block; 
+    margin: 10px auto; 
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.button1 {
+    width: 115px;
+    height: 35px; 
+    background: #A0A0A0;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px auto; 
+}
+
+.button2 {
+    width: 115px;
+    height: 25px;
+    background: #0066ff;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 25px;
+    margin: 10px auto; 
+}
+
+.button3 {
+    width: 115px;
+    height: 25px;
+    background: red;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    margin: 10px auto; 
+}
+
+
+.label {
+    color: white;
+    padding: 8px;
+    font-family: Arial;
+}
+
+
+.thick {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.done {
+    background-color: #04AA6D;
+}
+
+.pending {
+    background-color: #ff9800;
+}
+
+
+table, td {
+    border: 1px solid #ccc; 
+    padding: 15px;
+}
+
+table {
+    margin: 10px auto; 
+}
+
+h1 {
+    color: #cc0000;
+}

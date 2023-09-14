@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Pokemon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <style>
+        
+        label {
+            display: block; 
+            text-align: center; 
+            margin-bottom: 10px; 
+         }
+
+        input {
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 20px; 
+        }
+
+        
+        input[type="submit"] {
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Edit Pokemon</h1></center>
+    
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ pokemon.name }}" required>
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" value="{{ pokemon.type }}" required>
+
+        <label for="evolution">Evolution:</label>
+        <input type="text" id="evolution" name="evolution" value="{{ pokemon.evolution }}">
+
+        <input type="submit" value="Save Changes">
+    </form>
+
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>
