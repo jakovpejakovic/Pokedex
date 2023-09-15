@@ -8,4 +8,4 @@ Pokedex je web servis koja sadrži podatke o pokemonu iz prve generacije pokemon
 # Opis
 Jednostavna aplikacija za dodavanje, brisanje i pretraživanje pokemona po bazi podataka
 # Instalacija
-Potrebno je preuzeti fileove iz repozitorija i pokrenuti aplikaciju kroz docker
+Potrebno je preuzeti fileove iz repozitorija (POKEMONIFlask) i pokrenuti aplikaciju
